@@ -7,31 +7,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Epilogue', sans-serif; /* Sets the font to Epilogue, regular */
-            background-color: black; /* Sets the background color of the entire page to black */
-            color: white; /* Sets the text color to white for contrast */
-            padding: 40px 40px 40px 80px; /* Adds padding around the content, with extra padding on the left */
-            margin: 0; /* Removes the default margin */
+            font-family: 'Epilogue', sans-serif;
+            background-color: black;
+            color: white;
+            padding: 40px 40px 40px 80px;
+            margin: 0;
         }
         h1 {
-            font-weight: 400; /* Regular weight for Epilogue */
+            font-weight: 400;
         }
         a button {
-            display: block; /* Makes buttons block level to occupy full line */
-            width: auto; /* Adjusts width to fit content */
-            margin: 20px 0; /* Increases space above and below each button */
-            cursor: pointer; /* Changes cursor to pointer when hovering over buttons */
-            background-color: transparent; /* Transparent background for a minimalistic look */
-            color: white; /* Sets button text color to white */
-            border: 2px solid white; /* Adds a white border for definition */
-            padding: 12px 20px; /* Slightly taller padding for the button */
-            font-size: 16px; /* Sets a larger font size for better readability */
-            transition: all 0.3s; /* Smooth transition for all properties */
-            text-align: center; /* Centers text within the button */
+            display: block;
+            width: auto;
+            margin: 20px 0;
+            cursor: pointer;
+            background-color: transparent;
+            color: transparent; /* No color initially */
+            border: none; /* Remove border */
+            padding: 12px 20px;
+            font-size: 16px;
+            transition: all 0.3s;
+            text-align: center;
+            position: relative; /* Needed for positioning the pseudo-element */
+        }
+        a button::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid white;
+            background-color: transparent;
+            transition: background-color 0.3s;
+        }
+        a button:hover::before {
+            background-color: white;
         }
         a button:hover {
-            background-color: white; /* White background on hover */
-            color: black; /* Black text color on hover */
+            color: black; /* Text becomes visible and black on hover */
         }
     </style>
 </head>
