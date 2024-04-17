@@ -17,18 +17,18 @@
             font-weight: 400;
         }
         a button {
-            display: flex; /* Changed to flex for better centering */
-            align-items: center; /* Aligns the text and the circle vertically */
+            display: flex; /* Uses flexbox for alignment */
+            align-items: center; /* Centers items vertically */
             width: auto;
             margin: 20px 0;
             cursor: pointer;
             background-color: transparent;
-            color: white; /* Button text color */
-            border: none; /* Remove border */
+            color: white; /* Sets button text color to white */
+            border: none; /* Removes border */
             padding: 12px 20px;
             font-size: 16px;
             transition: all 0.3s;
-            text-align: center;
+            text-align: left; /* Aligns text to the left */
             position: relative; /* Needed for positioning the pseudo-element */
         }
         a button::before {
@@ -38,19 +38,18 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            width: 16px; /* Smaller circle */
-            height: 16px; /* Smaller circle */
+            width: 12px; /* Even smaller circle */
+            height: 12px; /* Even smaller circle */
             border-radius: 50%;
             border: 2px solid white;
             background-color: transparent;
             transition: background-color 0.3s;
+            margin-right: 20px; /* Adds spacing between circle and text */
         }
         a button:hover::before {
-            background-color: white;
+            background-color: white; /* Circle fills white on hover */
         }
-        a button:hover {
-            color: black; /* Text color changes on hover */
-        }
+        /* No change to text color on hover */
     </style>
 </head>
 <body>
@@ -60,4 +59,3 @@
     <a href="https://www.example3.com" target="_blank"><button type="button">Site 3</button></a>
 </body>
 </html>
-
