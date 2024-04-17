@@ -9,12 +9,26 @@
             font-family: 'Helvetica', Arial, sans-serif; /* Sets the font to Helvetica, with Arial as a fallback */
             background-color: black; /* Sets the background color of the entire page to black */
             color: white; /* Sets the text color to white for contrast */
-            padding: 40px; /* Adds padding around the content */
+            padding: 40px 40px 40px 80px; /* Adds padding around the content, with extra padding on the left */
             margin: 0; /* Removes the default margin */
+        }
+        h1 {
+            font-weight: 300; /* Makes the heading light weight */
         }
         a button {
             margin-top: 10px; /* Adds space between buttons */
             cursor: pointer; /* Changes cursor to pointer when hovering over buttons */
+            background-color: white; /* Sets a clean, white button background */
+            color: black; /* Sets button text color to black */
+            border: 1px solid #444; /* Adds a light border for definition */
+            padding: 10px 20px; /* Adds padding inside the button */
+            border-radius: 5px; /* Gives buttons rounded corners */
+            font-size: 16px; /* Sets a larger font size for better readability */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+        }
+        a button:hover {
+            background-color: #eee; /* Light grey color on hover for subtle effect */
+            color: #222; /* Darker text color on hover for contrast */
         }
     </style>
 </head>
@@ -25,3 +39,4 @@
     <a href="https://www.example3.com" target="_blank"><button type="button">Site 3</button></a>
 </body>
 </html>
+
